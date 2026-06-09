@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg:        #0d1117;
+    --surface:   #161b22;
+    --surface2:  #21262d;
+    --border:    #30363d;
+    --borderH:   #00d9ff;
+    --text:      #e6edf3;
+    --muted:     #8b949e;
+    --cyan:      #00d9ff;
+    --blue:      #58a6ff;
+    --purple:    #bc8cff;
+    --green:     #3fb950;
+    --yellow:    #d29922;
+    --orange:    #ff8c3c;
+    --red:       #f85149;
+    --own-msg:   #1c3a5e;
+  }
+}
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body, #root {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar       { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+  ::selection { background: rgba(0, 217, 255, 0.2); }
+}
+
+@layer utilities {
+  .bg-app     { background: var(--bg); }
+  .bg-surface { background: var(--surface); }
+  .bg-surface2{ background: var(--surface2); }
+  .border-app { border-color: var(--border); }
+  .text-app   { color: var(--text); }
+  .text-muted { color: var(--muted); }
+  .text-cyan  { color: var(--cyan); }
+  .text-blue  { color: var(--blue); }
+  .text-green { color: var(--green); }
+  .text-yellow{ color: var(--yellow); }
+  .text-red   { color: var(--red); }
+  .text-purple{ color: var(--purple); }
+  .text-orange{ color: var(--orange); }
+  .glow-cyan  { text-shadow: 0 0 12px rgba(0,217,255,0.6); }
+}
